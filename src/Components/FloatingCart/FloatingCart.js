@@ -8,7 +8,7 @@ import {useSelector} from 'react-redux'
 export default function FloatingCart() {
 
   const shoppingCart = useSelector(state => state)
-  console.log(shoppingCart)
+  // console.log(shoppingCart)
 
   let totalItem = 0
   

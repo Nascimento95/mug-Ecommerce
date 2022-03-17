@@ -28,7 +28,7 @@ export default function ProductShowcase() {
 
     const itemAdded = {
       ...inventory[productClicked],
-      quantity : quantityMug
+      quantity : Number(quantityMug)
     }
     dispatch({
       type: "ADDITEM",

@@ -6,7 +6,7 @@ export default function cartReducer(state = INITIAL_STATE, action) {
   
   switch (action.type) {
     case "ADDITEM":
-      console.log("add item")
+      // console.log("add item")
       const indexItemAdd = state.cart.findIndex(obj => obj.id === action.payload.id)
       if(indexItemAdd !== -1) {
           const updatedQuantity = {
@@ -31,8 +31,14 @@ export default function cartReducer(state = INITIAL_STATE, action) {
       }
       
       case "UPDATEITEM":
-        return {
 
+      const indexItemUpdate = state.cart.findIndex(obj => obj.id === action.payload.id)
+
+        const newArr = [...state.cart]
+        newArr.splice(indexItemUpdate, 1, action.payload)
+
+        return {
+            cart: newArr
         }
         
     default:
