@@ -9,7 +9,7 @@ export default function Products() {
     <div className="container-products">
       {inventory.map(item => 
         (<Link 
-          to={{pathname:`/produits/:${item.title.replace(/\s+/g, '').trim()}`}} 
+          to={{pathname:`/produits/${item.title.replace(/\s+/g, '').trim()}`}} 
           key={item.id}
         >
           <div className="bloc-card">
